@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="568.0" style="-fx-background-color: #050412;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UpdatePurchase.UpdatePurchsaeController">
+   <children>
+      <Pane prefHeight="45.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="238.0" layoutY="6.0" prefHeight="27.0" prefWidth="151.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" text="Update Purchase">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox layoutX="14.0" layoutY="64.0" prefHeight="269.0" prefWidth="160.0" spacing="25.0">
+         <children>
+            <Label prefHeight="18.0" prefWidth="135.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" text="Purchase ID:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="135.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" text="Supplier Name:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="135.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" text="Medicine Name:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="158.0" text="Category" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="157.0" text="Company:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="135.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" text="Purchase Date:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="135.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" text="Purchase Quantity:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="164.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" text="Purchase Price per Item:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="164.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" text="Total Amount:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="207.0" layoutY="64.0" prefHeight="290.0" prefWidth="204.0" spacing="18.0">
+         <children>
+            <Label fx:id="lblPurchaseID" prefHeight="17.0" prefWidth="215.0" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="txtSupplierName" prefHeight="25.0" prefWidth="206.0" promptText="Select Supplier" />
+            <ComboBox fx:id="txtMedicineName" prefHeight="25.0" prefWidth="208.0" promptText="Select Medicine" />
+            <ComboBox fx:id="txtCategoryName" prefHeight="25.0" prefWidth="206.0" promptText="Select Category" />
+            <JFXTextField fx:id="txtCompanyName" focusColor="WHITE" styleClass="txtFill" stylesheets="@../Style/myStyle.css" unFocusColor="WHITE" />
+            <JFXDatePicker fx:id="purchaseDate" prefHeight="28.0" prefWidth="218.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" />
+            <JFXTextField fx:id="purchaseQuantity" focusColor="#f8f8f8" prefHeight="25.0" prefWidth="211.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" unFocusColor="WHITE" />
+            <JFXTextField fx:id="purchasePrice" focusColor="#f8f8f8" prefHeight="25.0" prefWidth="211.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" unFocusColor="WHITE" />
+            <JFXTextField fx:id="purchaseTotal" editable="false" focusColor="#f8f8f8" onMouseClicked="#calculatePrice" prefHeight="25.0" prefWidth="211.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" unFocusColor="WHITE" />
+         </children>
+      </VBox>
+      <JFXButton fx:id="btnUpdate" layoutX="441.0" layoutY="64.0" onAction="#updatePurchase" prefHeight="35.0" prefWidth="111.0" style="-fx-background-color: #6699ff;" styleClass="btns" stylesheets="@../Style/myStyle.css" text="Update" textFill="#f5f5f5">
+         <font>
+            <Font name="Calibri Light" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SAVE" text="" />
+         </graphic>
+      </JFXButton>
+      <Label fx:id="messageUpdate" layoutX="433.0" layoutY="369.0" prefHeight="17.0" prefWidth="167.0" text="Record Updated Successfully" textFill="WHITE" visible="false" />
+      <Label fx:id="lblSupplierId" layoutX="441.0" layoutY="168.0" prefHeight="17.0" prefWidth="59.0" visible="false" />
+      <Label fx:id="lblMedicineID" layoutX="441.0" layoutY="205.0" prefHeight="17.0" prefWidth="59.0" visible="false" />
+      <Label fx:id="lblCategoryID" layoutX="441.0" layoutY="239.0" prefHeight="17.0" prefWidth="59.0" visible="false" />
+   </children>
+</AnchorPane>

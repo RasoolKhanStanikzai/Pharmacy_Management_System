@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="575.0" prefWidth="790.0" style="-fx-background-color: #050412;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EmployeeSubForms.UpdateForm.UpdateFrmController">
+    <stylesheets>
+        <URL value="@/Style/myStyle.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="-44.0" prefHeight="80.0" prefWidth="600.0" AnchorPane.leftAnchor="-44.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="427.0" layoutY="27.0" text="Update Record" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox layoutX="23.0" layoutY="113.0" prefHeight="351.0" prefWidth="260.0" spacing="25.0" stylesheets="@../../Style/myStyle.css">
+         <children>
+            <JFXTextField fx:id="empFirstName" focusColor="WHITE" promptText="First Name" styleClass="txtFill" />
+            <JFXTextField fx:id="empLastName" focusColor="WHITE" promptText="Last Name" styleClass="txtFill" />
+            <JFXComboBox fx:id="empPosition" focusColor="WHITE" prefHeight="28.0" prefWidth="261.0" promptText="Select Position" styleClass="comboBox" />
+            <JFXComboBox fx:id="empBloodGroup" focusColor="WHITE" prefHeight="28.0" prefWidth="261.0" promptText="Select Blood Group" styleClass="comboBox" />
+            <JFXTextField fx:id="empSalary" focusColor="WHITE" promptText="Salary" styleClass="txtFill" />
+            <DatePicker fx:id="empContractDate" prefHeight="26.0" prefWidth="258.0" promptText="Contract Date" styleClass="comboBox" />
+            <DatePicker fx:id="empContractEndDate" prefHeight="26.0" prefWidth="258.0" promptText="Contract Expiration Date" styleClass="comboBox" />
+         </children>
+      </VBox>
+      <VBox layoutX="342.0" layoutY="113.0" prefHeight="339.0" prefWidth="260.0" spacing="25.0" stylesheets="@../../Style/myStyle.css">
+         <children>
+            <JFXTextField fx:id="empContactNO" focusColor="WHITE" promptText="Contact NO" styleClass="txtFill" text="+93" />
+            <JFXTextField fx:id="empAlternativeNO" focusColor="WHITE" promptText="Alternative NO" styleClass="txtFill" text="+93" />
+            <JFXTextField fx:id="empEmail" focusColor="WHITE" promptText="Email Address" styleClass="txtFill" />
+            <JFXTextField fx:id="empCurrentAdd" focusColor="WHITE" promptText="Current Address" styleClass="txtFill" />
+            <JFXTextField fx:id="empPermanentAdd" focusColor="WHITE" promptText="Permanent Address" styleClass="txtFill" />
+            <JFXTextArea fx:id="empDescriptions" focusColor="WHITE" prefHeight="89.0" prefWidth="260.0" promptText="Descriptions" unFocusColor="BLACK">
+               <styleClass>
+                  <String fx:value="TextArea" />
+                  <String fx:value="txtFill" />
+               </styleClass>
+            </JFXTextArea>
+         </children>
+      </VBox>
+      <JFXButton fx:id="btnUpdate" layoutX="524.0" layoutY="464.0" onAction="#updateEmployee" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #6699ff;" stylesheets="@../../Style/myStyle.css" text="Update">
+         <styleClass>
+            <String fx:value="btns" />
+            <String fx:value="txtFill" />
+         </styleClass>
+      </JFXButton>
+      <ImageView fx:id="imgEmployeeImageViewer" fitHeight="119.0" fitWidth="140.0" layoutX="652.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/myPic_64.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnBrowseEmployeeImage" layoutX="649.0" layoutY="256.0" onAction="#browseEmpImage" prefHeight="32.0" prefWidth="125.0" style="-fx-border-color: gray;" stylesheets="@../../Style/myStyle.css" text="Browse Image">
+         <styleClass>
+            <String fx:value="roundbox" />
+            <String fx:value="btns" />
+            <String fx:value="txtFill" />
+         </styleClass>
+      </JFXButton>
+      <Label fx:id="lblID" layoutX="283.0" layoutY="507.0" visible="false" />
+      <Label fx:id="lblMessage" layoutX="262.0" layoutY="524.0" prefHeight="17.0" prefWidth="133.0" />
+   </children>
+</AnchorPane>

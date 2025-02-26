@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #050412;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Supplier.UpdateSupplierController">
+   <children>
+      <Pane layoutY="6.0" prefHeight="45.0" prefWidth="600.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="238.0" layoutY="6.0" prefHeight="27.0" prefWidth="151.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" text="Update Supplier">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox layoutX="46.0" layoutY="63.0" prefHeight="323.0" prefWidth="142.0" spacing="20.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="137.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" text="Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="137.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" text="Email">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="137.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" text="Phone">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="137.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" text="Address">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="137.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" text="Registration Date">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="137.0" styleClass="txtFill" stylesheets="@../Style/myStyle.css" text="Descriptions">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="200.0" layoutY="63.0" prefHeight="323.0" prefWidth="215.0" spacing="14.0" stylesheets="@../Style/myStyle.css">
+         <children>
+            <JFXTextField fx:id="uSupplierName" focusColor="WHITE" styleClass="txtFill" unFocusColor="WHITE" />
+            <JFXTextField fx:id="uSupplierEmail" focusColor="WHITE" styleClass="txtFill" unFocusColor="WHITE" />
+            <JFXTextField fx:id="uSupplierPhone" focusColor="WHITE" styleClass="txtFill" unFocusColor="WHITE" />
+            <JFXTextField fx:id="uSupplierAddress" focusColor="WHITE" styleClass="txtFill" unFocusColor="WHITE" />
+            <JFXDatePicker fx:id="uSupplierDate" prefHeight="28.0" prefWidth="221.0" styleClass="date-picker" stylesheets="@../Style/myStyle.css" />
+            <TextArea fx:id="uSupplierDescriptions" prefHeight="200.0" prefWidth="200.0" stylesheets="@../Style/myStyle.css">
+               <styleClass>
+                  <String fx:value="TextArea" />
+                  <String fx:value="txtFill" />
+               </styleClass>
+            </TextArea>
+         </children>
+      </VBox>
+      <JFXButton fx:id="btnUpdate" layoutX="445.0" layoutY="63.0" onAction="#updateSupplier" prefHeight="35.0" prefWidth="111.0" style="-fx-background-color: #6699ff;" styleClass="btns" stylesheets="@../Style/myStyle.css" text="Update" textFill="#f5f5f5">
+         <font>
+            <Font name="Calibri Light" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SAVE" text="" />
+         </graphic>
+      </JFXButton>
+      <Label fx:id="lblSupplierID" layoutX="513.0" layoutY="369.0" prefHeight="17.0" prefWidth="43.0" textFill="WHITE" />
+   </children>
+</AnchorPane>

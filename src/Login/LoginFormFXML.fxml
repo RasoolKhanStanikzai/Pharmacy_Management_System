@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #050412;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Login.LoginFormFXMLController">
+   <children>
+      <Pane layoutX="286.0" layoutY="14.0" prefHeight="70.0" prefWidth="732.0" style="-fx-background-color: #050412;" AnchorPane.leftAnchor="286.0" AnchorPane.rightAnchor="182.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="301.0" text="Login In" textAlignment="RIGHT" textFill="#f2f2f2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox layoutX="618.0" layoutY="220.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="115.0" prefWidth="218.0" spacing="20.0">
+         <children>
+            <ComboBox fx:id="comboUserRole" prefHeight="25.0" prefWidth="248.0" promptText="Select Role" stylesheets="@../Style/myStyle.css" />
+            <JFXTextField fx:id="txtUserName" focusColor="WHITE" promptText="User Name" styleClass="txtFill" stylesheets="@../Style/myStyle.css" unFocusColor="WHITE" />
+            <JFXPasswordField fx:id="txtUserPassword" focusColor="WHITE" promptText="User Password" styleClass="txtFill" stylesheets="@../Style/myStyle.css" unFocusColor="WHITE" />
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="618.0" layoutY="166.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="211.0" text="Authenticating System" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnLogin" layoutX="618.0" layoutY="360.0" onAction="#loadUser" prefHeight="27.0" prefWidth="218.0" style="-fx-border-color: gray;" styleClass="btns" stylesheets="@../Style/myStyle.css" text="Login In" textFill="WHITE" />
+      <Pane prefHeight="600.0" prefWidth="288.0" style="-fx-background-color: #181539;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="219.0" fitWidth="266.0" layoutX="11.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/pharmacystoreimage.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="266.0" text="Babakar KHIL " textAlignment="RIGHT" textFill="#f2f2f2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="58.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="288.0" text="Pharmacy Inventory System" textAlignment="RIGHT" textFill="#f2f2f2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="324.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="288.0" text="We Provide the best Service" textAlignment="RIGHT" textFill="#f2f2f2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label fx:id="lblDate" alignment="CENTER" contentDisplay="CENTER" layoutX="1200.0" layoutY="14.0" prefHeight="17.0" prefWidth="118.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,64 @@
+.parent{
+    -fx-background-color:#fff;
+}
+.sidebar{
+    -fx-background-color:#333645;
+}
+.btns{
+    -fx-background-color:transparent;
+}
+.btns:hover{
+    -fx-background-color:#202332;
+}
+.card01{
+    -fx-background-color:rgba(0,162,211,0.3);
+}
+.roundbox{
+    -fx-background-radius:5%;
+    -fx-border-radius:5%;
+}
+.roundSquire{
+     -fx-background-radius:3%;
+    -fx-border-radius:3%;
+}
+.roundLbl{
+    -fx-background-radius: 10%;
+    -fx-border-width: 5%;
+    -fx-border-color:white;    
+}
+.txtFill{
+    -fx-text-fill:white;
+}
+.comboBox{
+    -fx-background-color: #050412;     
+}
+.comboBox text-field{
+    -fx-text-fill:white;
+}
+.table-view{
+    -fx-background-color: #181539;
+    -fx-baround-radious:14 14 0 0;
+    -fx-text-fill:white;
+    -fx-border-color: gray;
+    -fx-border-radius: 2px;
+    
+}
+.table-view .column-header, .table-view .filler{
+    -fx-size:30px;
+    -fx-background-color: #181539;
+    -fx-border-color: white;
+    -fx-background-radius: 10px;
+}
+.table-view .column-header .label{
+    -fx-text-fill: white;
+}
+.labelSize{
+    -fx-font-size:14px;
+}
+.TextArea .content{
+    -fx-background-color:  #050412;
+}
+.date-picker .text-field{
+   -fx-text-fill: white;
+}
+

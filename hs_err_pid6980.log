@@ -1,0 +1,150 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=6980, tid=7644
+#
+# JRE version:  (8.0_65-b17) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.65-b01 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000003171000):  JavaThread "Unknown thread" [_thread_in_vm, id=7644, stack(0x0000000003070000,0x0000000003170000)]
+
+Stack: [0x0000000003070000,0x0000000003170000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000003171000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=7644, stack(0x0000000003070000,0x0000000003170000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 13312K, used 235K [0x00000000f1f00000, 0x00000000f2d80000, 0x0000000100000000)
+  eden space 11776K, 2% used [0x00000000f1f00000,0x00000000f1f3ae20,0x00000000f2a80000)
+  from space 1536K, 0% used [0x00000000f2c00000,0x00000000f2c00000,0x00000000f2d80000)
+  to   space 1536K, 0% used [0x00000000f2a80000,0x00000000f2a80000,0x00000000f2c00000)
+ ParOldGen       total 30208K, used 0K [0x00000000d5c00000, 0x00000000d7980000, 0x00000000f1f00000)
+  object space 30208K, 0% used [0x00000000d5c00000,0x00000000d5c00000,0x00000000d7980000)
+ Metaspace       used 767K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 75K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000012630000,0x0000000012790000] byte_map_base: 0x0000000011f82000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005a38a5b0
+ Begin Bits: [0x0000000012c80000, 0x0000000013710000)
+ End Bits:   [0x0000000013710000, 0x00000000141a0000)
+
+Polling page: 0x00000000016e0000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000000003270000, 0x00000000034e0000, 0x0000000012270000]
+ total_blobs=57 nmethods=0 adapters=37
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.028 loading class java/lang/Short
+Event: 0.029 loading class java/lang/Short done
+Event: 0.029 loading class java/lang/Integer
+Event: 0.029 loading class java/lang/Integer done
+Event: 0.029 loading class java/lang/Long
+Event: 0.029 loading class java/lang/Long done
+Event: 0.030 loading class java/lang/NullPointerException
+Event: 0.030 loading class java/lang/NullPointerException done
+Event: 0.030 loading class java/lang/ArithmeticException
+Event: 0.030 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff62bca0000 - 0x00007ff62bcd7000 	C:\Program Files\Java\jdk1.8.0_65\jre\bin\java.exe
+0x00007ff994610000 - 0x00007ff9947d2000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff993d40000 - 0x00007ff993ded000 	C:\WINDOWS\system32\KERNEL32.DLL
+0x00007ff991700000 - 0x00007ff9918dd000 	C:\WINDOWS\system32\KERNELBASE.dll
+0x00007ff992270000 - 0x00007ff992316000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x00007ff993c80000 - 0x00007ff993d1d000 	C:\WINDOWS\system32\msvcrt.dll
+0x00007ff992380000 - 0x00007ff9923db000 	C:\WINDOWS\system32\sechost.dll
+0x00007ff992060000 - 0x00007ff992186000 	C:\WINDOWS\system32\RPCRT4.dll
+0x00007ff993df0000 - 0x00007ff993f3e000 	C:\WINDOWS\system32\USER32.dll
+0x00007ff993fb0000 - 0x00007ff994133000 	C:\WINDOWS\system32\GDI32.dll
+0x00007ff988780000 - 0x00007ff9889f4000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10240.17184_none_f41d7a705752bce6\COMCTL32.dll
+0x00007ff992230000 - 0x00007ff992266000 	C:\WINDOWS\system32\IMM32.DLL
+0x00007ff993b20000 - 0x00007ff993c7c000 	C:\WINDOWS\system32\MSCTF.dll
+0x0000000059aa0000 - 0x0000000059b72000 	C:\Program Files\Java\jdk1.8.0_65\jre\bin\msvcr100.dll
+0x0000000059b80000 - 0x000000005a409000 	C:\Program Files\Java\jdk1.8.0_65\jre\bin\server\jvm.dll
+0x00007ff993d20000 - 0x00007ff993d28000 	C:\WINDOWS\system32\PSAPI.DLL
+0x00007ff98c6b0000 - 0x00007ff98c6b9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff98ed30000 - 0x00007ff98ed53000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff988050000 - 0x00007ff98805a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff993f40000 - 0x00007ff993fa9000 	C:\WINDOWS\system32\WS2_32.dll
+0x00007ff992220000 - 0x00007ff992228000 	C:\WINDOWS\system32\NSI.dll
+0x0000000001690000 - 0x00000000016bc000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ff9919a0000 - 0x00007ff9919e4000 	C:\WINDOWS\system32\cfgmgr32.dll
+0x00007ff990d60000 - 0x00007ff990d87000 	C:\WINDOWS\SYSTEM32\DEVOBJ.dll
+0x0000000059a50000 - 0x0000000059a5f000 	C:\Program Files\Java\jdk1.8.0_65\jre\bin\verify.dll
+0x0000000059a20000 - 0x0000000059a49000 	C:\Program Files\Java\jdk1.8.0_65\jre\bin\java.dll
+0x0000000059a00000 - 0x0000000059a16000 	C:\Program Files\Java\jdk1.8.0_65\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: E:\BCS\Project Pharmacy Management System\PMSystem\dist\run935675963\PMSystem.jar
+java_class_path (initial): E:\BCS\Project Pharmacy Management System\PMSystem\dist\run935675963\PMSystem.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\sqlite;C:\Users\Rasookhan\AppData\Roaming\npm;C:\Users\Rasookhan\AppData\Local\Programs\Microsoft VS Code\bin
+USERNAME=Rasookhan
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 10240 (10.0.10240.17113)
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 2766184k(436700k free), swap 5318708k(5184k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.65-b01) for windows-amd64 JRE (1.8.0_65-b17), built on Oct  6 2015 16:39:20 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Sat Dec 03 14:12:11 2022
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
